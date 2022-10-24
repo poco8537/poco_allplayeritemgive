@@ -17,7 +17,7 @@ local all_playeritemgive = {function(player,choice)
                 if amounitem ~= nil or amounitem ~= "" then
                     amounitem = tonumber(amounitem)
                     if amounitem >= 1 then
-                        vRP.request({player, "허가 없는 아이템 지급은 해임 입니다.","정말로 아이템을 지급하시겠습니까? (최소 지급 예상 시간 : 10초)", 30, function(player, ok)
+                        vRP.request({player, "허가 없는 아이템 지급은 해임 입니다.","정말로 아이템을 지급하시겠습니까", 30, function(player, ok)
                             if ok then
                                 if vRP.getItemName({nameitem}) ~= nameitem then
                                     local users = vRP.getUsers({})
@@ -29,7 +29,7 @@ local all_playeritemgive = {function(player,choice)
                                                 vRP.giveInventoryItem({user_id, nameitem, amounitem})
                                                 playerlist = playerlist = 1
                                             else
-                                                Wait(10)
+                                                Wait(50)
                                                 playerlist = 0
                                                 vRP.giveInventoryItem({user_id, nameitem, amounitem})
                                             end
