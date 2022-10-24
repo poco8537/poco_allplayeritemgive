@@ -3,11 +3,6 @@ local Proxy = module("vrp", "lib/Proxy")
 
 vRP = Proxy.getInterface("vRP")
 vRPclient = Tunnel.getInterface("vRP", GetCurrentResourceName())
-frontend = Tunnel.getInterface(GetCurrentResourceName(), GetCurrentResourceName())
-
-backend = {}
-Tunnel.bindInterface(GetCurrentResourceName(), backend)
-
 
 local all_playeritemgive = {function(player,choice)
     local playerlist = 0
