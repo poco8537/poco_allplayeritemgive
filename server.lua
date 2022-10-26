@@ -19,15 +19,8 @@ local all_playeritemgive = {function(player,choice)
                                     for k,v in pairs(users) do
                                         local target_source = vRP.getUserSource({k})
                                         if target_source ~= nil then
-                                            -- 로직 : 10명 주고 0.03초 쉬고 하는 방식
-                                            if playerlist >= 10 then
                                                 vRP.giveInventoryItem({user_id, nameitem, amounitem})
                                                 playerlist = playerlist = 1
-                                            else
-                                                Wait(50)
-                                                playerlist = 0
-                                                vRP.giveInventoryItem({user_id, nameitem, amounitem})
-                                            end
                                         end
                                     end
                                 else
