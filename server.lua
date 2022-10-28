@@ -19,7 +19,7 @@ local all_playeritemgive = {function(player,choice)
                                     for k,v in pairs(users) do
                                         local target_source = vRP.getUserSource({k})
                                         if target_source ~= nil then
-                                            vRP.giveInventoryItem({user_id, nameitem, amounitem})
+                                            vRP.giveInventoryItem({k, nameitem, amounitem})
                                         end
                                     end
                                 else
